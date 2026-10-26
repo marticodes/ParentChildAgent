@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #24251f;
+  background: #f6f6f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  width: min(900px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 64px 0 48px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #77786b;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Manrope", sans-serif;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 44px);
+  letter-spacing: -1.8px;
+  margin: 12px 0;
+}
+
+.subtitle {
+  color: #73746b;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.connection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  color: #77786b;
+  font-size: 12px;
+  background: white;
+  border: 1px solid #e9e9e1;
+  border-radius: 30px;
+  padding: 10px 14px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #c5a45e;
+  border-radius: 50%;
+}
+
+.connection.online .status-dot {
+  background: #45996c;
+}
+
+.conversation {
+  background: white;
+  border: 1px solid #e9e9e1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px #26261508;
+}
+
+.conversation-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 26px;
+  border-bottom: 1px solid #efefe9;
+}
+
+.conversation-heading h2 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.conversation-heading span {
+  font-size: 12px;
+  color: #77786b;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 64px 24px;
+}
+
+.empty-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 16px;
+  border-radius: 16px;
+  background: #f0f0e9;
+  font-size: 24px;
+}
+
+.empty-state h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  max-width: 350px;
+  margin: 0 auto;
+  color: #77786b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.messages {
+  max-height: 480px;
+  min-height: 160px;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.message-row {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.own-row {
+  justify-content: flex-end;
+}
+
+.other-row {
+  justify-content: flex-start;
+}
+
+.message-content {
+  max-width: min(80%, 480px);
+}
+
+.message-author {
+  font-size: 11px;
+  font-weight: 700;
+  color: #77786b;
+  margin-bottom: 7px;
+}
+
+.own-row .message-author,
+.own-row .message-time {
+  text-align: right;
+}
+
+.message-bubble {
+  background: #f0f0e9;
+  padding: 13px 16px;
+  border-radius: 4px 16px 16px 16px;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.own-row .message-bubble {
+  background: #303d32;
+  color: white;
+  border-radius: 16px 4px 16px 16px;
+}
+
+.message-time {
+  display: block;
+  color: #929388;
+  font-size: 10px;
+  margin-top: 7px;
+}
+
+.composer {
+  display: flex;
+  gap: 12px;
+  padding: 18px 22px;
+  border-top: 1px solid #efefe9;
+}
+
+.composer input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  border: 1px solid #e6e6dd;
+  border-radius: 12px;
+  outline: none;
+}
+
+.composer input:focus {
+  border-color: #778978;
+}
+
+.composer button {
+  padding: 0 22px;
+  background: #303d32;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.composer button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.footer-note {
+  text-align: center;
+  padding: 0 16px 18px;
+  font-size: 11px;
+  color: #929388;
+}
+
+@media (max-width: 600px) {
+  .app {
+    width: calc(100% - 24px);
+    padding-top: 32px;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .conversation-heading {
+    padding: 18px;
+  }
+
+  .messages {
+    padding: 18px 12px;
+  }
+
+  .composer {
+    padding: 12px;
+  }
+
+  .composer button {
+    padding: 0 14px;
+  }
+}
