@@ -1,0 +1,258 @@
+
+.parent-container {
+    min-height: 100vh;
+    background: #f6f4fb;
+    padding: 32px 16px;
+    color: #292638;
+    font-family: inherit;
+  }
+  
+  .parent-evaluation-wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  
+  .parent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #625d72;
+  }
+  
+  .parent-progress-track {
+    width: 100%;
+    height: 7px;
+    background: #e5e1ef;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 22px;
+  }
+  
+  .parent-progress-fill {
+    height: 100%;
+    background: #8875c7;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+  }
+  
+  .parent-card {
+    max-width: 680px;
+    margin: 0 auto;
+    background: white;
+    padding: 36px;
+    border-radius: 18px;
+    box-shadow: 0 5px 24px rgba(45, 35, 75, 0.06);
+  }
+  
+  .welcome-card,
+  .completion-card {
+    margin-top: 8vh;
+    text-align: center;
+  }
+  
+  .parent-icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #eee9fa;
+    color: #7661b5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .parent-card h1 {
+    font-size: 28px;
+    margin: 0 0 18px;
+  }
+  
+  .parent-card p {
+    line-height: 1.65;
+    color: #625d72;
+  }
+  
+  .parent-small-text {
+    font-size: 13px;
+    color: #898497 !important;
+    margin-top: 22px;
+  }
+  
+  .parent-post {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  
+  .parent-post-image {
+    display: block;
+    max-width: 100%;
+    max-height: 480px;
+    object-fit: contain;
+    margin: 0 auto 18px;
+    border-radius: 12px;
+  }
+  
+  .parent-post-caption {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #373346 !important;
+    white-space: pre-wrap;
+  }
+  
+  .parent-divider {
+    height: 1px;
+    background: #ece9f2;
+    margin: 28px 0;
+  }
+  
+  .parent-question h2 {
+    font-size: 17px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+    color: #302b40;
+  }
+  
+  .parent-instruction {
+    font-size: 13px;
+    color: #817b91 !important;
+    margin: 0 0 16px;
+  }
+  
+  .parent-options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+  }
+  
+  .parent-checkbox-option,
+  .parent-radio-option {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 13px 14px;
+    border: 1px solid #e6e2ee;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #494458;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  
+  .parent-checkbox-option:hover,
+  .parent-radio-option:hover {
+    background: #f8f6fc;
+    border-color: #b9addb;
+  }
+  
+  .parent-checkbox-option input,
+  .parent-radio-option input {
+    width: 17px;
+    height: 17px;
+    accent-color: #8875c7;
+    flex-shrink: 0;
+  }
+  
+  .parent-choice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-top: 16px;
+  }
+  
+  .parent-note-area {
+    margin-top: 20px;
+  }
+  
+  .parent-note-area label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+  }
+  
+  .parent-note-area textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    border: 1px solid #e2deeb;
+    border-radius: 10px;
+    padding: 13px;
+    font: inherit;
+    font-size: 14px;
+    color: #373346;
+    outline: none;
+  }
+  
+  .parent-note-area textarea:focus {
+    border-color: #8875c7;
+  }
+  
+  .parent-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  
+  .parent-primary-button,
+  .parent-secondary-button {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+  }
+  
+  .parent-primary-button {
+    background: #8875c7;
+    color: white;
+  }
+  
+  .parent-secondary-button {
+    background: #eeeaf5;
+    color: #625778;
+  }
+  
+  .parent-primary-button:hover,
+  .parent-secondary-button:hover {
+    opacity: 0.85;
+  }
+  
+  .welcome-card .parent-primary-button {
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .parent-container {
+      padding: 20px 12px;
+    }
+  
+    .parent-card {
+      padding: 24px 18px;
+    }
+  
+    .parent-card h1 {
+      font-size: 24px;
+    }
+  
+    .parent-options-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .parent-question h2 {
+      font-size: 16px;
+    }
+  
+    .parent-post-image {
+      max-height: 360px;
+    }
+  }
+  
