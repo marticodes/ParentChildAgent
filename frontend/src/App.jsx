@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 
-const BACKEND_URL = "ws://localhost:8000";
+const BACKEND_URL = "ws://localhost:8001";
 
 export default function App() {
   const role = window.location.pathname.startsWith("/parent") ? "parent" : "child";
